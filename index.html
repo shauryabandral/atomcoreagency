@@ -373,7 +373,7 @@
 
         /* --- SECTIONS --- */
         .hero {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -443,7 +443,6 @@
             padding: 0;
             border: none;
             cursor: none;
-            group: hover;
         }
 
         .blog-img-wrapper {
@@ -561,6 +560,7 @@
         }
 
         /* Mobile */
+        /* Tablet */
         @media(max-width: 1024px) {
             h1 {
                 font-size: 3.5rem;
@@ -573,23 +573,109 @@
                 gap: 50px;
             }
 
-            .stats-bar {
-                flex-direction: column;
-                gap: 40px;
-                text-align: center;
-            }
-
             header {
-                padding: 20px;
+                padding: 20px 30px;
             }
 
             nav {
                 display: none;
             }
+        }
+
+        /* Mobile */
+        @media(max-width: 768px) {
+            .container {
+                padding: 0 20px;
+                width: 100%;
+                overflow: hidden;
+                /* Prevent horizontal overflow */
+            }
+
+            h1,
+            .hero h1 {
+                font-size: 10vw;
+                /* Responsive font size based on viewport width */
+                line-height: 1.1;
+                word-wrap: break-word;
+                hyphens: auto;
+            }
+
+            .hero h4.reveal {
+                font-size: 0.9rem;
+                /* Smaller subtitle */
+                letter-spacing: 3px !important;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                padding: 0 10px;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 320px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 16px 30px;
+            }
+
+            .stats-bar {
+                flex-direction: column;
+                gap: 40px;
+                text-align: center;
+                padding: 40px 20px;
+            }
+
+            .stat-num {
+                font-size: 3rem;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            /* Footer adjustments */
+            footer .grid-2 {
+                gap: 40px;
+            }
+
+            footer h4 {
+                text-align: center !important;
+            }
 
             .social-link {
                 margin-left: 0;
                 width: 100%;
+                justify-content: center;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .cursor-dot,
+            .cursor-outline,
+            .interaction-hint {
+                display: none;
+            }
+
+            h1,
+            .hero h1 {
+                font-size: 2rem !important;
+                /* Aggressively reduced size */
+                line-height: 1.1;
+                width: 100%;
+                word-wrap: break-word;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+                padding: 0;
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
             }
         }
     </style>
@@ -632,7 +718,7 @@
             <div class="container glitch-wrapper">
                 <h4 class="reveal" style="color: var(--accent-glow); letter-spacing: 6px; margin-bottom: 20px;">NEXT-GEN
                     MARKETING</h4>
-                <h1 class="scramble text-reveal">DIGITAL<br>ACCELERATION</h1>
+                <h1 class="scramble text-reveal">DIGITAL<br>GRAVITY</h1>
                 <p class="reveal">We don't just market. We ignite. Premium logo promotions, influencer dominance, and
                     high-velocity growth campaigns.</p>
                 <div class="reveal" style="margin-top: 50px;">
